@@ -1,0 +1,48 @@
+Ping Pong with Node.js, Express, Socket.IO
+---------------------------------------------------------------
+
+Operations :
+Server:
+-Sends a PONG response when it receives a PING message from the client;
+-Outputs the message to the console when it gets a PONG response from the server
+-Emits a PING message to a client at random intervals of 5 to 10 second.
+
+Client:
+-Sends a PONG response when it receives a PING message from the server
+-Outputs the message to the Web console when it gets a PONG response from the server
+-Emits a PING message to the server when a user clicks a Submit button
+
+
+---------------------------------------------------------------
+Required Softwares:
+
+-Node v0.13.0-pre
+	Dependencies:
+	"body-parser": "~1.10.2",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "express": "~4.11.1",
+    "jade": "~1.9.1",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0",
+    "socket.io": "^1.3.2"
+-jQuery v2.1.3
+-Bootstrap v3.3.2 (css and js)
+
+---------------------------------------------------------------
+
+Steps to execute:
+
+a) Go to the project folder :
+	cd ping-pong
+b)Make sure all the node dependencies are installed.
+	npm install
+c)Start the node server
+	node app.js
+d) Open the url http://localhost:3000/ in the browser
+e) All the server intiated ping message communications with the time stamp are shown on the right side column named as "Server Pings"
+f) To send a ping from the client to the server click on button named "Click Here To Send Server Ping"
+g) All the client intiated ping message communications with the time stamp are shown on the left side colum called as "Client Pings"
+h) When a client receives a pong message from server it is displayed in the webconsole of the browser as well.
+i) When a server recieves a pong message it displayed on the server logs
+---------------------------------------------------------------

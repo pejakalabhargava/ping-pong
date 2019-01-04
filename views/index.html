@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <title>Ping Pong Demo</title>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/stylesheets/mycss.css">
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2>Ping Pong in Action</h2>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-6">
+              <input id="sendPing" type="submit" value="Click Here To Send Server Ping " class="btn btn-primary btn-lg btn-block">
+              <div class="panel panel-default">
+                <div class="panel-leftheading">
+                  <h2 class="panel-lefttitle">Client     Pings</h2>
+                </div>
+                <div id="clientPingPongMessage" class="panel-rightbody">
+                  <h6>Please click on "click To Send Server Ping" to send ping notification to server</h6>
+                  <hr><br>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-leftheading">
+                  <h2 class="panel-lefttitle">Server       Pings</h2>
+                </div>
+                <div id="serverPingPongMessage" class="panel-rightbody">
+                  <h6>Displays all the ping-pong communication initiated from the server</h6>
+                  <hr><br>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/client.socket.io.js"></script>
+  </body>
+</html>

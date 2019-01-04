@@ -1,0 +1,41 @@
+extends layout
+mixin metric(id,title,footer)
+	div(class="panel panel-default",id="#{id}-metric" )
+	if title
+		div.panel-heading: h1.panel-title= title
+	div(class="panel-body metric")
+		h1(id="#{id}")= "TBD"
+		input#sendPing(type="submit", value="Ping", class="btn btn-primary btn-lg btn-block")
+	if footer
+		div.panel-footer= footer
+
+
+block scripts
+	script(src="/socket.io/socket.io.js")
+	script(src="/javascripts/client.socket.io.js")
+block content
+	div(class="container")
+		div(class="row")
+			h2 Ping Pong in Action
+			hr
+			div(class="container")
+				div(class="row")
+					div(class="col-sm-5 col-md-6")
+						input#sendPing(type="submit", value="Click Here To Send Server Ping ", class="btn btn-primary btn-lg btn-block")
+						div(class="panel panel-default")
+							div(class="panel-leftheading")
+								h2(class="panel-lefttitle") Client     Pings
+							div(class="panel-rightbody" id="clientPingPongMessage")
+								h6 Please click on "click To Send Server Ping" to send ping notification to server
+								hr
+								br
+							div(class="clearfix")
+					div(class="col-sm-5 col-md-6")
+						div(class="panel panel-default")
+							div(class="panel-leftheading")
+								h2(class="panel-lefttitle") Server       Pings
+							div(class="panel-rightbody" id="serverPingPongMessage")
+								h6 Displays all the ping-pong communication initiated from the server
+								hr
+								br
+							div(class="clearfix")
